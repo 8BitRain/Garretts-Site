@@ -1,0 +1,609 @@
+
+
+<link href='http://fonts.googleapis.com/css?family=Sorts+Mill+Goudy' rel='stylesheet' type='text/css'>
+<script src="plugins/noframework.waypoints.js"></script>
+<script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+<script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script src="plugins/jquery-ui.js"></script>
+
+
+
+<style type="text/css">
+	.landingPageWrapper{
+		position: relative;
+	}
+	.landingPageBackground{
+		background-size: cover;
+		position: relative;
+		width: auto;
+		height: 100%;
+		background-repeat: no-repeat;
+		/*background-color: darkseagreen;
+		background-color: black;*/
+
+		background-color: rgb(10, 8, 8);
+		/* rgb(20,21,23)*/
+	}
+	.landingPageOverlay{
+		background-image: url(images/GarrettOnBridgeEdit.png);
+		background-size: cover;
+		background-repeat: no-repeat;
+		/*Was 15 em */
+		background-position: 0 700;
+		width: 100%;
+		height: 100%;
+		position: relative;
+		bottom: 50%;
+	/*opacity: .65;*/
+	}
+
+	.header{
+		z-index: 2;
+		background-image: url(images/GarrettOnBridgeEdit.png);
+		background-size: cover;
+		background-repeat: no-repeat;
+		/*Was 15 em */
+		background-position: 0 0px;
+		position: fixed;
+		width: 100%;
+		/*Was previously 90% and had a nice effect */
+		height: 100%;
+		top: 0px;
+		/*position: relative;*/
+		/*margin: 0px auto;*/
+	}
+
+	.content{
+		width: 100%;
+		/*rgb(102, 57, 57);*/
+		background: rgb(45, 42, 42);
+		height: 3000px;
+		margin: 200px auto;
+	}
+
+	.nameWrapper{
+		z-index: 2;
+		border: solid 4px;
+		text-align: center;
+		position: absolute;
+		margin-right: auto;
+		margin-left: auto;
+		left: 0;
+		right: 0;
+		width: 10em;
+		color: black;
+		/*font-weight: 100;*/
+		letter-spacing: 8;
+		text-transform: uppercase;
+		font-size: 40px;
+		top: 45%;
+		/*22em*/
+		/*opacity: .6;*/
+		font-family: 'Sorts Mill Goudy', serif;
+	}
+
+	.mainContent{
+		position: relative;
+	}
+
+	.titles{
+		width: 100%;
+		z-index: 2;
+		/*Was previously absolute*/
+		position: absolute;
+		/*top 25%*/
+		padding-top: 1.5%;
+		padding-bottom: 25;
+		background: rgb(45, 42, 42);
+		opacity: .9;
+		/*Was previously 32% */
+		top: 88%;
+		font-weight: 100;
+		letter-spacing: 8;
+		font-size: 30px;
+		text-transform: uppercase;
+		font-family: 'Sorts Mill Goudy', serif;
+	}
+
+	.titles table, tr{
+		width: 100%;
+	}
+
+	.titles table, thead{
+		color: white;
+	}
+
+	.aboutPage{
+		position: absolute;
+		top: 100%;
+		height: 100%;
+		width: 100%;
+		font-family: 'Sorts Mill Goudy', serif;
+		font-size: 30;
+		/*padding-top: 5%;*/
+	}
+
+	.aStatement{
+		position: absolute;
+		top: 40%;
+		background: rgb(45, 42, 42);
+		opacity: .9;
+		color: white;
+		margin-left: auto;
+		margin-right: auto;
+		left: 0;
+		right: 0;
+		width: 50%;
+		display: none;
+		text-align: center;
+	}
+
+	.leftNav{
+		z-index: 2;
+		position: fixed;
+		top: 10%;
+		height: 90%;
+		width: 10%;
+		display: none;
+		letter-spacing: 8;
+		font-size: 30px;
+		text-transform: uppercase;
+		font-family: 'Sorts Mill Goudy', serif;
+	}
+
+	.leftNav ul {
+    display:block;
+    font-family: 'Sorts Mill Goudy', serif;
+   
+	}
+
+	li {
+    	width:100%;
+	    padding-top: 50%;
+	    text-align:center;
+	    list-style:none;
+	    cursor:pointer;
+	    background: black;
+	}
+
+	.leftNav table{
+		color: white;
+		background: black;
+	}
+
+	.leftNav th{
+		border: solid 4px;
+	}
+
+	.leftNav h1{
+		padding-top: 30%;
+		padding-bottom: 30%;
+	}
+
+
+	body{
+    	margin-right: 0px;
+    	margin-left: 0px;
+    	margin-top: 0px;
+    	margin-bottom: 0px;
+    	/*hide display bar for Firefox */
+    	overflow-y: hidden;
+	}
+	/* Hide display bar for Chrome */
+	::-webkit-scrollbar { 
+    display: none; 
+	}
+
+
+</style>
+
+
+
+
+<div class="header" id="pOverlay">
+	
+</div>
+<div  class="content">
+	<h1  id="name-waypoint" class="nameWrapper"> Garrett T. Pauli </h1>
+	<div class="titles" id="titles">
+		<table>
+			<thead>
+				<tr>
+					<th style="width: 35%;"><h1>Poet</h1></th>
+					<th><h1>Dancer</h1></th>
+					<th style="width: 35%;"><h1>Artist</h1></th>
+				</tr>
+			</thead>
+		</table>
+	</div>
+	<div class="leftNav" id="leftNav">
+			<table>
+				<tr>
+					<th>
+						<h1> Home </h1>
+					</th>
+				</tr>
+				<tr>
+					<th>
+						<h1> About </h1>
+					</th>
+				</tr>
+					
+				<tr>
+					<th>
+						<h1> Events </h1>
+					</th>
+				</tr>
+
+				<tr>
+					<th>
+						<h1> Projects </h1>
+					</th>
+				</tr>
+			</table>
+	</div>
+	<div id="aboutPage" class="aboutPage">
+			<div class="aStatement" id="aStatement">
+					<p> Garrett is a poet and dancer who uses an introspective lens to examine interracial relationships, white privilege, and standards of masculinity. Having an identity as a lower class white man from a multicultural family affords Garrett a non-traditional perspective. He creates multimedia projects that fuse unique perspectives to harbor critical dialogue. </p>
+			</div>
+			<img src="images/GarrettFlies.jpg">
+	</div> 
+</div>
+<!-- <div id="content"> 
+  <div class = "landingPageBackground">
+</div> 
+	
+
+</div> -->
+
+<script>
+	console.log("Width of the current web browser viewport: " + $(window).width());
+	var fixPosition = false;
+	var initScroll = false;
+	var initHeight = 500;
+	var initCheckNameWaypoint = false;
+	var canCheckMouse = true;
+	var mousewheelValue = 0;
+
+
+	//Page state defines what page the user is currently at. 0 represents the landing page
+	var pageState = 0;
+
+	/*if(fixPosition == true)
+	{
+		var p1 = document.getElementById("pOverlay");
+		p1.style.position = "fixed";
+	}*/
+	window.onload = checkBotPosition;
+  function checkBotPosition(){
+  	var p1 = document.getElementById("pOverlay");
+  	var position = p1.style.backgroundPosition;
+	
+  }
+
+  function parseBackgroundPosY(backPos){
+  	posArr = backPos.split(" ");
+  	//console.log(posArr.length);
+  	var posY;
+
+  	if(posArr.length != 1)
+  	{
+  		posY = parseInt(posArr[1].split("px"));
+  		//console.log("direct posY: " + posY);
+  	}
+  	 return posY;
+  }
+
+  /*function parallax(){
+  	var p1 = document.getElementById("pOverlay");
+  	var content = document.getElementById("main-content");
+  	var position = p1.style.backgroundPosition;
+  	yValue = parseBackgroundPosY(position);
+  	//console.log("Value of y: " + yValue );
+  	if(parseBackgroundPosY(position) <= 100)
+  	{
+  		//console.log("Switching background parse position");
+  	}
+  	//console.log("This is the current backgroundPosition position " + position);
+
+  	var scrollSpeed;
+
+  	//var scrollOffset = window.pageYOffset;
+  	//Used because well for some reason background image position has no initial state -_-
+  	if(initScroll == false)
+  	{
+  		console.log("Calling initScroll")
+  		//p1.style.backgroundPosition =   "0" + " " + String(-window.pageYOffset);
+  		console.log("InitScrolled By: " + p1.scrollTop);
+  		initScroll = true;
+  	}
+  	
+  	if(initScroll == true)
+  	{
+  	if(parseBackgroundPosY(position) > -366){
+  	//p1.style.backgroundPosition =   "0" + " " + String(-window.pageYOffset);	
+  	console.log("Current height: " + p1.style.height.length);
+  	initHeight = initHeight - 20;
+  	p1.style.height = initHeight  + "px";
+  	console.log("Scrolled By: " + p1.scrollTop);
+  	}
+  	}
+  	
+  	//p1.style.bottom = 270 + window.pageYOffset + "px";
+  	//return false;
+  }
+  //window.addEventListener("mousewheel", parallax, false);*/
+
+  //Using Waypoints
+  var waypointNameHit = false;
+  if(waypointNameHit)
+  {
+
+  }
+ new Waypoint({
+  element: document.getElementById('name-waypoint'),
+  handler: function() {
+  	/*$(window).scroll(function() {
+	/*
+	This is the bread and butter of the scroll. Basically with the name as a waypoint you will scroll down towards the next waypoint until the name hits the very top
+	thus the yOffset should also be changing as well.
+	*/
+   /* $('html,body').animate({
+        scrollTop: 500
+    }, 800);
+    console.log("WORKING");
+    alert("Hit!" + this.triggerPoint);
+	});*/
+ 	if(!initCheckNameWaypoint)
+ 	{
+ 		waypointNameHit = true;	
+ 		//var name  = document.getElementById('name-waypoint');
+ 		//name.style.position = "fixed";
+ 		initCheckNameWaypoint = false;
+ 	} 
+ 	 //alert("Value of waypoint hit: " + waypointNameHit);
+  },
+  offset: "5%"
+});
+
+ /*$(window).scroll(function() {
+ 	if(waypointNameHit == false)
+ 	{
+ 		var x = document.getElementsByTagName("BODY")[0];
+ 		x.style.overflow = "hidden";
+ 		$('html,body').animate({
+        	scrollTop: 800
+    	}, 1200);
+    	waypointNameHit = true;
+ 	}
+ });*/
+
+
+ function parallax_scroll(e){
+ 	//Process pass in the object e.
+ 	console.log("Can we check mouse wheel?: " + canCheckMouse);
+ 	var x = document.getElementsByTagName("BODY")[0];
+ 	x.style.overflow = "hidden";
+ 	//$(window).off('mousewheel');
+    if(canCheckMouse)
+    {
+    if((e.originalEvent.wheelDelta > 0 || e.originalEvent.detail < 0) && pageState == 1)
+    {
+      //console.log("moveup");
+      	//Toggle the listener for the window scroll off	
+      	canCheckMouse = false;
+     	//if(waypointNameHit == true)
+ 		//{
+	 		console.log("Scrolling Up");
+	 		//$("#pOverlay").finish();
+	 		//Hide the navigation panel
+	    	$('#leftNav').fadeOut(200);
+	    	$('#aStatement').fadeOut(200);
+	 		$('html,body').animate({
+	        	scrollTop: 0
+	    	}, 1200, function(){
+	    		waypointNameHit = false;
+	    		canCheckMouse = true;
+	    	});
+	 		//Change the width of the waypoint for scrolling up
+	    	$('#name-waypoint').animate({
+	    		width: "10em"
+	    	}, 1200)
+	    	//Scroll Background image
+	    	$('#pOverlay').animate({
+	    		height: "100%",
+	    		backgroundPositionY: 5
+	    	}, 1200,  function(){
+	    		waypointNameHit = false;
+	    		canCheckMouse = true;
+	    		pageState = 0;
+	    		//Fade the Titles In
+	    		fadeInTitle();
+	    	});
+	    	console.log("Finished Scroll");
+ 		//}
+ 		//else
+ 		//{
+ 			//canCheckMouse = true;
+ 		//}
+ 		console.log("Value of waypointNameHit: " + waypointNameHit);
+ 		console.log("Value of mousewheel" + e.originalEvent.wheelDelta);
+    }
+    else if((e.originalEvent.wheelDelta < 0 || e.originalEvent.detail > 0) && pageState == 0)
+    {
+    	canCheckMouse = false;
+       // if(waypointNameHit == false)
+ 		//{
+ 			console.log("Scrolling Down");
+ 			var p = $('#aboutPage').position();
+ 			$('html,body').animate({
+	        	scrollTop: 430
+	    	}, 1200,  function(){
+	    		waypointNameHit = true;
+	    		canCheckMouse = true;
+	    	});
+ 			//Change the width of the waypoint for scrolling down
+	    	$('#name-waypoint').animate({
+	    		width: "15em"
+	    	}, 1200)
+	    	$('#pOverlay').animate({
+	    		//Change to 10% for banner effect
+	    		height: "0%",
+	    		backgroundPositionY: -400
+	    	}, 1200,  function(){
+	    		waypointNameHit = true;
+	    		canCheckMouse = true;
+	    		//Display the navigation panel
+	    		$('#leftNav').fadeTo('slow', .5);
+	    		$('#aStatement').fadeTo('slow', .9);
+	    		pageState = 1;	
+	    	});
+	    	$("#aboutPage").animate({
+	 				top: "40%"
+	 			}, 1200);
+
+
+	    	console.log("Finished Scroll");
+ 		//}
+ 		//else
+ 		//{
+ 		//	canCheckMouse = true;
+ 		//}
+ 		console.log("Value of waypointNameHit: " + waypointNameHit);
+ 		console.log("Value of mousewheel" + e.originalEvent.wheelDelta);
+    }
+    else
+    {
+    	console.log("Firefox bug test: nothing occurs " + e.originalEvent.detail);
+    }
+	}
+}
+function fadeOutTitle(){
+	//if(pageState == 0)
+	//{
+		$('#titles').fadeTo('fast', 1);
+		$('#titles').fadeOut(600);
+	//}
+}
+function fadeInTitle(){
+	//if(pageState == 1)
+	//{
+		$('#titles').fadeTo('1200', .9);
+		//$('#titles').fadeIn(1200);
+	//}
+}
+
+//Handles the events for Chrome/Safari. They both use -webkit
+$(window).on('mousewheel DOMMouseScroll', function(e){
+ 	if(pageState == 0)
+ 	{
+ 	 //Scrolling down to state 0
+  	 parallax_scroll(e);
+  	 if(e.originalEvent.wheelDelta < 0 || e.originalEvent.detail > 0)
+  	 {
+  	 	fadeOutTitle();
+  	 }
+  	/* else
+  	 {
+  	 	fadeInTitle();
+  	 }*/
+  	}
+  	if(pageState == 1)
+  	{
+  		 if(e.originalEvent.wheelDelta > 0 || e.originalEvent.detail  < 0)
+  		 {
+  		 	//Scrolling up to state 0. That is handled in this function
+  		 	 parallax_scroll(e);
+  		 	 //fadeInTitle();
+  		 }
+  	}
+});
+//Handles the scrolling for Firefox since it uses a different call for mousewheel
+
+</script>
+
+<script>
+	/*! Copyright (c) 2010 Brandon Aaron (http://brandonaaron.net)
+ * Licensed under the MIT License (LICENSE.txt).
+ */
+(function($) {
+    // backgroundPosition[X,Y] get hooks
+    var $div = $('<div style="background-position: 3px 5px">');
+    $.support.backgroundPosition   = $div.css('backgroundPosition')  === "3px 5px" ? true : false;
+    $.support.backgroundPositionXY = $div.css('backgroundPositionX') === "3px" ? true : false;
+    $div = null;
+
+    var xy = ["X","Y"];
+
+    // helper function to parse out the X and Y values from backgroundPosition
+    function parseBgPos(bgPos) {
+        var parts  = bgPos.split(/\s/),
+            values = {
+                "X": parts[0],
+                "Y": parts[1]
+            };
+        return values;
+    }
+
+    if (!$.support.backgroundPosition && $.support.backgroundPositionXY) {
+        $.cssHooks.backgroundPosition = {
+            get: function( elem, computed, extra ) {
+                return $.map(xy, function( l, i ) {
+                    return $.css(elem, "backgroundPosition" + l);
+                }).join(" ");
+            },
+            set: function( elem, value ) {
+                $.each(xy, function( i, l ) {
+                    var values = parseBgPos(value);
+                    elem.style[ "backgroundPosition" + l ] = values[ l ];
+                });
+            }
+        };
+    }
+
+    if ($.support.backgroundPosition && !$.support.backgroundPositionXY) {
+        $.each(xy, function( i, l ) {
+            $.cssHooks[ "backgroundPosition" + l ] = {
+                get: function( elem, computed, extra ) {
+                    var values = parseBgPos( $.css(elem, "backgroundPosition") );
+                    return values[ l ];
+                },
+                set: function( elem, value ) {
+                    var values = parseBgPos( $.css(elem, "backgroundPosition") ),
+                        isX = l === "X";
+                    elem.style.backgroundPosition = (isX ? value : values[ "X" ]) + " " + 
+                                                    (isX ? values[ "Y" ] : value);
+                }
+            };
+            $.fx.step[ "backgroundPosition" + l ] = function( fx ) {
+                $.cssHooks[ "backgroundPosition" + l ].set( fx.elem, fx.now + fx.unit );
+            };
+        });
+    }
+})(jQuery);
+</script>
+
+
+<!-- Example code -->
+<!--
+<p><button id="scroll">scrollTop()</button></p>
+
+<div id="test"></div>
+
+$(window).scroll(function() {
+
+	
+	/** This is the bread and butter of the scroll. Basically with the name as a waypoint you will scroll down towards the next waypoint until the name hits the very top
+	thus the yOffset should also be changing as well.
+    $('html,body').animate({
+        scrollTop: $('#test').css('top')
+    }, 800);
+});
+
+#test {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    top: 2000px;
+    background: green;
+} -->
